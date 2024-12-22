@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Search } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
@@ -16,7 +17,7 @@ export default function Home() {
     <div className="text-slate-700">
       <header className="flex items-center justify-center mt-20">
         <Card className="w-[1300px] border-2">
-          <CardContent className="flex items-center justify-between p-6 gap-6">
+          <CardContent className="flex items-center justify-start p-6 gap-6">
             <div className="flex items-center gap-6">
               <Image
                 src={"/images.png"}
@@ -26,8 +27,15 @@ export default function Home() {
                 className="rounded-xl"
               />
               <div className="text-slate-800">
-                <h1 className="text-5xl font-bold">Pavlodar Culture</h1>
+                <h1 className="text-5xl font-bold mb-2">Irtysh Echo</h1>
                 <p>Find the best cultural events in Pavlodar</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 ml-auto mr-20 justify-center">
+              <h2 className="w-[200px] text-2xl font-bold">Search an event</h2>
+              <div className=" relative">
+                <Search className="absolute top-2 left-2 text-slate-600" width={20} />
+                <Input type="text" placeholder="       Search an event" />
               </div>
             </div>
             <div className="flex flex-col gap-2 justify-center">
@@ -105,7 +113,9 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
                   <Card className="flex flex-col">
@@ -131,7 +141,9 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
                   <Card className="flex flex-col">
@@ -156,7 +168,9 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
                 </CardContent>
@@ -169,10 +183,10 @@ export default function Home() {
                   <CardDescription>Observe nearest events</CardDescription>
                 </CardHeader> */}
                 <CardContent className="w-full mx-auto px-20 grid grid-cols-3 gap-20">
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
-                        src={"/Aimauit.jpg"}
+                        src={"/aima.jpg"}
                         width={400}
                         height={400}
                         alt="img.png"
@@ -192,13 +206,15 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
-                        src={"/Chekhov.jpg"}
+                        src={"/chekhov.jpg"}
                         width={400}
                         height={400}
                         alt="img.png"
@@ -218,10 +234,12 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
                         src={"/orig.jpeg"}
@@ -242,7 +260,9 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardFooter className="mt-auto">
-                      <Button className="bg-red-500">Learn More</Button>
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
                     </CardFooter>
                   </Card>
                 </CardContent>
@@ -255,19 +275,19 @@ export default function Home() {
                   <CardDescription>Observe nearest events</CardDescription>
                 </CardHeader> */}
                 <CardContent className="w-full mx-auto px-20 grid grid-cols-3 gap-20">
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
-                        src={"/potanin.jpg"}
+                        src={"/baisak.jpg"}
                         width={400}
-                        height={400}
+                        height={200}
                         alt="img.png"
                         className=" object-cover rounded-t-xl"
                       />
                     </CardContent>
                     <CardHeader>
                       <CardTitle>
-                        Историко-краеведческий музей имени Г. Потанина
+                        Филармония имени Исы Байзакова
                       </CardTitle>
                       <CardDescription>
                         Павлодарский областной историко-краеведческий музей
@@ -277,11 +297,16 @@ export default function Home() {
                         Музей был основан в 1920.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
-                        src={"/Buhar.jpg"}
+                        src={"/college.jpeg"}
                         width={400}
                         height={400}
                         alt="img.png"
@@ -290,7 +315,7 @@ export default function Home() {
                     </CardContent>
                     <CardHeader>
                       <CardTitle>
-                        Музей литературы и искусства имени Бухар жырау
+                        Музыкальный колледж
                       </CardTitle>
                       <CardDescription>
                         Культурное учреждение, расположенное в Павлодаре,
@@ -300,11 +325,16 @@ export default function Home() {
                         и общественного деятеля Бухара Жырау.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
-                        src={"/Xud.jpeg"}
+                        src={"/school.jpg"}
                         width={320}
                         height={200}
                         alt="img.png"
@@ -312,7 +342,7 @@ export default function Home() {
                       />
                     </CardContent>
                     <CardHeader>
-                      <CardTitle>Павлодарский художественный музей</CardTitle>
+                      <CardTitle>Павлодарский музыкальная школа</CardTitle>
                       <CardDescription>
                         Это важное культурное учреждение, расположенное в
                         Павлодаре, в котором хранятся библиотеки и произведения
@@ -322,6 +352,11 @@ export default function Home() {
                         популяризации художественного наследия.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                 </CardContent>
               </Card>
@@ -333,7 +368,7 @@ export default function Home() {
                   <CardDescription>Observe nearest events</CardDescription>
                 </CardHeader> */}
                 <CardContent className="w-full mx-auto px-20 grid grid-cols-3 gap-20">
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
                         src={"/potanin.jpg"}
@@ -355,6 +390,11 @@ export default function Home() {
                         Музей был основан в 1920.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="">
                     <CardContent className="p-0">
@@ -378,6 +418,11 @@ export default function Home() {
                         и общественного деятеля Бухара Жырау.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="">
                     <CardContent className="p-0">
@@ -400,18 +445,23 @@ export default function Home() {
                         популяризации художественного наследия.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                 </CardContent>
               </Card>
             </TabsContent>
-            <TabsContent value="museum">
+            <TabsContent value="cinema">
               <Card className="py-16">
                 {/* <CardHeader className="text-center">
                   <CardTitle className="text-4xl">Theatr</CardTitle>
                   <CardDescription>Observe nearest events</CardDescription>
                 </CardHeader> */}
                 <CardContent className="w-full mx-auto px-20 grid grid-cols-3 gap-20">
-                  <Card className="">
+                  <Card className="flex flex-col">
                     <CardContent className="p-0">
                       <Image
                         src={"/potanin.jpg"}
@@ -433,6 +483,11 @@ export default function Home() {
                         Музей был основан в 1920.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="">
                     <CardContent className="p-0">
@@ -456,6 +511,11 @@ export default function Home() {
                         и общественного деятеля Бухара Жырау.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                   <Card className="">
                     <CardContent className="p-0">
@@ -478,11 +538,125 @@ export default function Home() {
                         популяризации художественного наследия.
                       </CardDescription>
                     </CardHeader>
+                    <CardFooter className="mt-auto">
+                      <Button className="bg-red-500 text-base">
+                        Learn More
+                      </Button>
+                    </CardFooter>
                   </Card>
                 </CardContent>
               </Card>
             </TabsContent>
           </Tabs>
+        </CardContent>
+      </Card>
+      <Card className="w-[1300px] mx-auto flex flex-col justify-center items-start my-20 gap-6">
+        <CardHeader className="w-full items-center justify-center">
+          <CardTitle className="text-3xl">Покупай продукты молодых талантов</CardTitle>
+          <CardDescription className="text-lg">
+            Объекты исскуства сделанные руками молодых талантов
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid grid-cols-2 justify-items-center items-center gap-8 w-full">
+          <Card className="w-[550px]">
+            <CardContent className="p-0 flex gap-4">
+              <Image
+                src={"/bag.jpeg"}
+                width={180}
+                height={200}
+                className=" h-[180px] rounded-bl-lg rounded-tl-xl object-cover"
+                alt="bag"
+              />
+              <div className="flex flex-col items-start mt-2">
+                <h1 className="text-xl font-semibold">
+                  Рюкзак с этническим дизайном
+                </h1>
+                <p className="text-base text-slate-700">
+                  Просторный рюкзак, украшенный казахским национальным
+                  орнаментом
+                </p>
+                <h2 className="text-2xl font-bold mt-2 text-yellow-700">
+                  3990тг.
+                </h2>
+                <Button className="mt-auto mb-4 mr-4 self-end bg-red-600">
+                  Добавить в корзину
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="w-[550px]">
+            <CardContent className="p-0 flex gap-4">
+              <Image
+                src={"/bag2.jpeg"}
+                width={180}
+                height={200}
+                className="h-[180px] rounded-bl-lg rounded-tl-xl object-cover"
+                alt="bag2"
+              />
+              <div className="flex flex-col items-start mt-2">
+                <h1 className="text-xl font-semibold">Cумка с орнаментом</h1>
+                <p className="text-base text-slate-700">
+                  Ее дизайн включает богатую палитру красок
+                </p>
+                <h2 className="text-2xl font-bold mt-2 text-yellow-700">
+                  3990тг.
+                </h2>
+                <Button className="mt-auto mb-4 mr-4 self-end bg-red-600">
+                  Добавить в корзину
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="w-[550px]">
+            <CardContent className="p-0 flex gap-4">
+              <Image
+                src={"/knives.jpeg"}
+                width={180}
+                height={200}
+                alt="knives"
+                className="h-[180px] rounded-bl-lg rounded-tl-xl object-cover"
+              />
+              <div className="flex flex-col items-start mt-2">
+                <h1 className="text-xl font-semibold">
+                  Серьги с совиным пером
+                </h1>
+                <p className="text-base text-slate-700">
+                  Украшение, которое сочетает традиционные мотивы
+                </p>
+                <h2 className="text-2xl font-bold mt-2 text-yellow-700">
+                  3990тг.
+                </h2>
+                <Button className="mt-auto mb-4 mr-4 self-end bg-red-600">
+                  Добавить в корзину
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="w-[550px]">
+            <CardContent className="p-0 flex gap-4">
+              <Image
+                src={"/toy.jpeg"}
+                width={180}
+                height={200}
+                alt="knives"
+                className=" h-[180px] rounded-bl-lg rounded-tl-xl object-cover"
+              />
+              <div className="flex flex-col items-start mt-2">
+                <h1 className="text-xl font-semibold">
+                  Казахская мягкая игрушка
+                </h1>
+                <p className="text-base text-slate-700">
+                  Мягкая плюшевая игрушка в форме оленя
+                </p>
+                <h2 className="text-2xl font-bold mt-2 text-yellow-700">
+                  3990тг.
+                </h2>
+                <Button className="mt-auto mb-4 mr-4 self-end text-sm bg-red-600">
+                  Добавить в корзину
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </CardContent>
       </Card>
     </div>
